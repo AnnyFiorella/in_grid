@@ -4,9 +4,33 @@
   --color-line: #4a4a4a;
   --bg-color: #E0E0E0;
   --main-font-family: 'Roboto', sans-serif;
+  --font-title: 24px;
+  --font-weigth-title: 700;
+  --font-subtitle: 18px;
+  --font-weigth-subtitle: 500;
 }
 
-#app {
-  color: var(--main-color);
+* {
+  color: var(--color-text);
   font-family: var(--main-font-family);
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
 }
+
+.bg-nav {
+  background-color: var(--color-text);
+}
+
+/* #nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+} */
