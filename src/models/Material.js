@@ -11,7 +11,6 @@ const Material = new Schema({
     cod_material: { type: Number},
     cod_program: { type: Number},
     duration: { type: String},
-    type: { type: String},
     classification: { type: String},
     cost_center: { type: String},
     genre: { type: String}

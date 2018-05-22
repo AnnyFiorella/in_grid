@@ -51,7 +51,6 @@ router.put('/:id', (req, res, next) => {
             material.cod_material = req.body.cod_material;
             material.cod_program = req.body.cod_program;
             material.duration = req.body.duration;
-            material.type = req.body.type;
             material.classification = req.body.classification;
             material.cost_center = req.body.cost_center;
             material.genre = req.body.genre
