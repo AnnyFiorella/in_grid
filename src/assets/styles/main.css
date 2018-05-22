@@ -1,0 +1,12 @@
+:root {
+  --color-orange: #ff5000;
+  --color-text: #262626;
+  --color-line: #4a4a4a;
+  --bg-color: #E0E0E0;
+  --main-font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  color: var(--main-color);
+  font-family: var(--main-font-family);
+}
