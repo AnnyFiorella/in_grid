@@ -8,29 +8,40 @@
   --font-weigth-title: 700;
   --font-subtitle: 18px;
   --font-weigth-subtitle: 500;
+  --font-general: 16px;
+  --font-weigth-general: 400;
 }
 
 * {
   color: var(--color-text);
   font-family: var(--main-font-family);
-  font-size: 16px;
   text-transform: none;
-  font-weight: 400;
 }
 
 .bg-nav {
   background-color: var(--color-text);
 }
 
-/* #nav {
-  padding: 30px;
+
+.font-general {
+  font-size: var(--font-general);
+  font-weight: var(--font-weigth-general);
+}
+.subtitle-styles {
+  font-size: var(--font-subtitle);
+  font-weight: var(--font-weigth-subtitle);
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.title-styles {
+  font-size: var(--font-title);
+  font-weight: var(--font-weigth-title);
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
+.underline {
+  text-decoration: underline;
+}
+.outline{
+  outline: rgb(221, 20, 20) 1px solid;
+}
+.bg-subtitle{
+  background-color: var( --color-orange);
+}
