@@ -34,6 +34,10 @@
   font-weight: var(--font-weigth-title);
 }
 
+.bg-orange{
+  background-color: var( --color-orange);
+}
+
 /* Estilos de Navegador */
 .nav-bg {
   background-color: var(--color-text);
@@ -48,9 +52,7 @@
 .underline {
   text-decoration: underline;
 }
+
 .outline{
   outline: rgb(221, 20, 20) 1px solid;
-}
-.bg-subtitle{
-  background-color: var( --color-orange);
 }
