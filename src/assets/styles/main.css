@@ -34,9 +34,10 @@
   font-weight: var(--font-weigth-title);
 }
 
-.bg-orange{
-  background-color: var( --color-orange);
+.bg-orange {
+  background-color: var(--color-orange);
 }
+
 
 /* Estilos de Navegador */
 .nav-bg {
@@ -55,4 +56,12 @@
 
 .outline{
   outline: rgb(221, 20, 20) 1px solid;
+}
+.line-card {
+  background-color:  var( --color-orange);
+  height: 1px;
+  border:none;
+}
+.path {
+  fill:#ff5000;;
 }
