@@ -8,19 +8,42 @@
   --font-weigth-title: 700;
   --font-subtitle: 18px;
   --font-weigth-subtitle: 500;
+  --font-general: 16px;
+  --font-weigth-general: 400;
 }
 
 * {
   color: var(--color-text);
   font-family: var(--main-font-family);
-  font-size: 16px;
   text-transform: none;
-  font-weight: 400;
 }
 
-.bg-nav {
+/* Estilos generales */
+.font-general {
+  font-size: var(--font-general);
+  font-weight: var(--font-weigth-general);
+}
+
+.subtitle-styles {
+  font-size: var(--font-subtitle);
+  font-weight: var(--font-weigth-subtitle);
+}
+
+.title-styles {
+  font-size: var(--font-title);
+  font-weight: var(--font-weigth-title);
+}
+
+/* Estilos de Navegador */
+.nav-bg {
   background-color: var(--color-text);
 }
+
+.nav-text {
+  font-size: var(--font-subtitle)!important;
+  font-weight: var(--font-weigth-general)!important;
+}
+
 
 /* #nav {
   padding: 30px;

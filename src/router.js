@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
 import Material from './views/Material.vue'
+import Programs from './views/Programs.vue'
+import Segments from './views/Segments.vue'
+import Support from './views/Support.vue'
+import Grid from './views/Grid.vue'
+import Views from './views/Views.vue'
 
 Vue.use(Router)
 
@@ -10,18 +14,39 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
-    },
-    {
-      path: '/material',
       name: 'material',
       component: Material
+    },
+    {
+      path: '/programs',
+      name: 'programs',
+      component: Programs
+    },
+    {
+      path: '/segments',
+      name: 'segments',
+      component: Segments
+    },
+    {
+      path: '/support',
+      name: 'support',
+      component: Support
+    },
+    {
+      path: '/grid',
+      name: 'grid',
+      component: Grid
+    },
+    {
+      path: '/views',
+      name: 'views',
+      component: Views
     }
   ]
 })
+
+// {
+//   path: '/',
+//   name: 'home',
+//   component: Home
+// },
