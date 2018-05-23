@@ -1,28 +1,18 @@
 <template>
   <v-container  grid-list-md>
     <v-layout row wrap>
-      <v-flex xs7>
-        <span class="grey lighten-2 py-2 px-3">Lista de Materiales</span>             
-      </v-flex>
-      <v-flex xs5>
-        <img src="../assets/images/calendario.svg">  
-        <div class="">
-          <v-icon>search</v-icon>
-          <input type="text" placeholder="Search title.."/>                
-        </div>                   
-      </v-flex>
       <v-flex xs12 mb-5
         v-for="card in cards"
         :key="card.title">
-        <v-card color="grey lighten-2" class="black--text elevation-7">
-        <v-container fluid grid-list-lg>
-          <v-layout row>
-            <v-flex xs3>
-              <v-card-media
+        <v-card color="grey lighten-2" class="elevation-7">
+          <v-container fluid grid-list-lg>
+            <v-layout row>
+              <v-flex xs3>
+                <v-card-media
                 :src="card.src"
                 height="250px">    
-              </v-card-media>
-            </v-flex>
+                 </v-card-media>
+               </v-flex>
             <v-flex xs4 >
               <v-flex xs11 >
                 <div class="px-5 py-4">
@@ -37,34 +27,36 @@
   
       <!-- segunda parte -->
             <v-flex xs5>
-              <v-layout justify-end class="outline pr-2"> 
-                <img :src="card.url">                 
-                <!-- <img src="../assets/images/edit.svg"> 
-                <img src="../assets/images/candado-open.svg">                            -->
+              <v-layout justify-end class="pr-2">               
+                  <!-- <img :src="card.url" :alt="card.title"> -->                                           
+                <img class="mr-2" src="../assets/images/edit.svg"> 
+                <img src="../assets/images/candado-open.svg">                         
               </v-layout>
-              <div class="pa-3 outline">                    
+              <div class="pa-3 line-heigth">                    
                 <div class ="subtitle-styles">
-                  <span class="underline">Duración:<br></span> <span class="font-general black--text" v-text="card.duration"></span>
+                  <span class="underline">Duración:<br></span> <span class="font-general" v-text="card.duration"></span>
                 </div> 
                 <hr class= "line-card"> 
+                <br>
                 <v-layout row>
                   <v-flex >                   
                     <div class ="subtitle-styles">
-                      <span class="underline">Tipo:<br></span> <span class="font-general black--text" v-text="card.materialType"></span>
+                      <span class="underline">Tipo:<br></span> <span class="font-general" v-text="card.materialType"></span>
                     </div>
                   </v-flex> 
                   <v-flex xs6> 
                     <div class ="subtitle-styles">
-                      <span class="underline">Género:<br></span> <span class="font-general black--text" v-text="card.genre"></span>
+                      <span class="underline">Género:<br></span> <span class="font-general" v-text="card.genre"></span>
                     </div>
                   </v-flex>  
                 </v-layout>                   
                 <hr class= "line-card">
+                <br>
                 <div class ="subtitle-styles">
-                  <span class="underline">Centro de Costo:<br></span> <span class="font-general black--text" v-text="card.center"></span>
+                  <span class="underline">Centro de Costo:<br></span> <span class="font-general" v-text="card.center"></span>
                   </div>                     
-              </div>
-            </v-flex>    
+                </div>
+              </v-flex>    
             </v-layout>
           </v-container>
         </v-card>
@@ -88,7 +80,7 @@ export default {
         materialClasification: "Publico General",
         genre: "Genero1",
         center: "(32)Nombre del centro",
-         url: 'assets/images/logo.png',
+        url: "./images/logo.png",
       },
       {
         title: "Rapidos y Furiosos: sin control",
@@ -100,7 +92,8 @@ export default {
         materialType: "Periodistico",
         materialClasification: "Publico General",
         genre: "Genero1",
-        center: "(32)Nombre del centro"
+        center: "(32)Nombre del centro",
+      
       }
     ]
   })

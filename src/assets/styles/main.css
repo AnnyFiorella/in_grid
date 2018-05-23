@@ -1,8 +1,8 @@
 :root {
   --color-orange: #ff5000;
-  --color-text: #262626;
-  --color-line: #4a4a4a;
-  --bg-color: #E0E0E0;
+  --color-dark: #262626;
+  --color-dark-gray: #4a4a4a;
+  --color-gray: #E0E0E0;
   --main-font-family: 'Roboto', sans-serif;
   --font-title: 24px;
   --font-weigth-title: 700;
@@ -13,7 +13,7 @@
 }
 
 * {
-  color: var(--color-text);
+  color: var(--color-dark);
   font-family: var(--main-font-family);
   text-transform: none;
 }
@@ -37,7 +37,13 @@
 .bg-orange {
   background-color: var(--color-orange);
 }
+.bg-gray {
+  background-color: var(--color-gray);
+ }
 
+ .text-orange{
+  color:var( --color-orange);
+}
 
 /* Estilos de Navegador */
 .nav-bg {
@@ -53,14 +59,12 @@
 .underline {
   text-decoration: underline;
 }
-.outline{
-  outline: rgb(221, 20, 20) 1px solid;
-}
 .line-card {
   background-color:  var( --color-orange);
   height: 1px;
   border:none;
 }
-.path {
-  fill:#ff5000;;
+
+.line-heigth {
+  line-height: 1.7;
 }
