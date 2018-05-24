@@ -1,11 +1,12 @@
 :root {
   --color-orange: #ff5000;
-  --color-text: #262626;
-  --color-line: #4a4a4a;
-  --bg-color: #E0E0E0;
+  --color-dark: #262626;
+  --color-dark-gray: #4a4a4a;
+  --color-gray: #E0E0E0;
   --main-font-family: 'Roboto', sans-serif;
   --font-title: 24px;
   --font-weigth-title: 700;
+  --font-title-views: 20px;
   --font-subtitle: 18px;
   --font-weigth-subtitle: 500;
   --font-general: 16px;
@@ -13,7 +14,7 @@
 }
 
 * {
-  color: var(--color-text);
+  color: var(--color-dark);
   font-family: var(--main-font-family);
   text-transform: none;
 }
@@ -25,8 +26,8 @@
 }
 
 .subtitle-styles {
-  font-size: var(--font-subtitle);
-  font-weight: var(--font-weigth-subtitle);
+  font-size: var(--font-subtitle)!important;
+  font-weight: var(--font-weigth-subtitle)!important;
 }
 
 .title-styles {
@@ -34,14 +35,22 @@
   font-weight: var(--font-weigth-title);
 }
 
+.title-views {
+  font-size: var(--font-title-views)!important;
+  font-weight: var(--font-weigth-title)!important;
+}
+
 .bg-orange {
   background-color: var(--color-orange);
 }
 
+.bg-gray {
+  background-color: var(--color-gray);
+}
 
-/* Estilos de Navegador */
+/* Estilos Navegador */
 .nav-bg {
-  background-color: var(--color-text);
+  background-color: var(--color-dark);
 }
 
 .nav-text {

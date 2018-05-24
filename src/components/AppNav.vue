@@ -1,5 +1,4 @@
 <template>
-<div>
   <v-card flat extended>
       <v-toolbar class="pt-3 pb-3" color="white" flat fixed>
         <v-toolbar-title>
@@ -13,10 +12,9 @@
           <v-btn :to="item.url" flat class="white--text nav-text pl-3 pr-3" item>{{ item.title }}</v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-toolbar flat extended>
+      <v-toolbar flat extended extension-height="110">
       </v-toolbar>
   </v-card>
-  </div>
 </template>
 
 <script>
@@ -28,12 +26,12 @@ export default {
   data: () => ({
     items: [
       { url: '/', title: 'Materiales'},
-      { url: '/programs', title: 'Programs'},
-      { url: '/segments', title: 'Segments'},
-      { url: '/support', title: 'Support'},
-      { url: '/grid', title: 'Grid'},
-      { url: '/views', title: 'Views'},
-      { url: '/exit', title: 'Exit'}
+      { url: '/programs', title: 'Programas'},
+      { url: '/segments', title: 'Segmentos'},
+      { url: '/support', title: 'Soporte'},
+      { url: '/grid', title: 'Parrilla'},
+      { url: '/views', title: 'Vistas'},
+      { url: '/exit', title: 'Salida'}
     ]
   })
 };
