@@ -55,10 +55,10 @@
       </v-flex>
     </v-layout>
 
-    <!-- Botón de nuevo -->
+    <!-- Botón nuevo material -->
     <v-layout row>
       <v-flex text-xs-right>
-        <v-btn class="bg-orange white--text subtitle-styles mr-0 pr-3 pl-3">NUEVO</v-btn>
+        <v-btn to="/newMaterial" class="bg-orange white--text subtitle-styles mr-0 pr-3 pl-3">NUEVO</v-btn>
       </v-flex>
     </v-layout>
   </v-container>

@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
 import Material from './views/Material.vue'
 import Programs from './views/Programs.vue'
 import Segments from './views/Segments.vue'
 import Support from './views/Support.vue'
 import Grid from './views/Grid.vue'
 import Views from './views/Views.vue'
+import NewMaterial from './views/NewMaterial.vue'
 
 Vue.use(Router)
 
@@ -41,12 +42,11 @@ export default new Router({
       path: '/views',
       name: 'views',
       component: Views
+    },
+    {
+      path: '/newMaterial',
+      name: 'newMaterial',
+      component: NewMaterial
     }
   ]
 })
-
-// {
-//   path: '/',
-//   name: 'home',
-//   component: Home
-// },
