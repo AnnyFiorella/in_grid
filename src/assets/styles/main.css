@@ -6,6 +6,7 @@
   --main-font-family: 'Roboto', sans-serif;
   --font-title: 24px;
   --font-weigth-title: 700;
+  --font-title-views: 20px;
   --font-subtitle: 18px;
   --font-weigth-subtitle: 500;
   --font-general: 16px;
@@ -25,13 +26,18 @@
 }
 
 .subtitle-styles {
-  font-size: var(--font-subtitle);
-  font-weight: var(--font-weigth-subtitle);
+  font-size: var(--font-subtitle)!important;
+  font-weight: var(--font-weigth-subtitle)!important;
 }
 
 .title-styles {
   font-size: var(--font-title);
   font-weight: var(--font-weigth-title);
+}
+
+.title-views {
+  font-size: var(--font-title-views)!important;
+  font-weight: var(--font-weigth-title)!important;
 }
 
 .bg-orange {
@@ -45,9 +51,9 @@
   color:var( --color-orange);
 }
 
-/* Estilos de Navegador */
+/* Estilos Navegador */
 .nav-bg {
-  background-color: var(--color-text);
+  background-color: var(--color-dark);
 }
 
 .nav-text {
@@ -59,7 +65,6 @@
 .underline {
   text-decoration: underline;
 }
-
 
 .line-card {
   background-color:  var( --color-orange);

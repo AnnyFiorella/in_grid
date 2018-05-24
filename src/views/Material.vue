@@ -1,18 +1,20 @@
 <template>
-  <div class="material">
+  <div class="material" data-app>
+    <Headboard></Headboard>
     <Cards></Cards>
-    <!-- <Card msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Cards from '@/components/Cards.vue'
+import Headboard from '@/components/Headboard.vue'
 
 export default {
   name: 'material',
   components: {
-    Cards
+    Cards,
+    Headboard
   }
 }
 </script>

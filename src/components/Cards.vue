@@ -126,8 +126,7 @@ export default {
       { 
         canned:false,
         title: "América Noticias: Primera Edición",
-        src:
-          "https://cde.americatv.com.pe/minisites/an-primera-edicion-360x227-316522.jpg",
+        src: "https://cde.americatv.com.pe/minisites/an-primera-edicion-360x227-316522.jpg",
         materialCode: 123,
         programCode: 321,
         duration: "2h 30min",
