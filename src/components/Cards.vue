@@ -4,11 +4,16 @@
       <v-flex xs12 mb-5
         v-for="card in cards"
         :key="card.title">
+<<<<<<< HEAD
         <v-card color="grey lighten-2" class="black--text elevation-7">
+=======
+        <v-card color="grey lighten-2" class="elevation-7">
+>>>>>>> 4807b43e81fec26621de4978d804c8498926de62
           <v-container fluid grid-list-lg>
             <v-layout row>
               <v-flex xs3>
                 <v-card-media
+<<<<<<< HEAD
                   :src="card.src"
                   height="250px">    
                 </v-card-media>
@@ -54,6 +59,54 @@
                   <div class ="subtitle-styles">
                     <span class="underline">Centro de Costo:<br></span> <span class="font-general black--text" v-text="card.center"></span>
                     </div>                     
+=======
+                :src="card.src"
+                height="250px">    
+                 </v-card-media>
+               </v-flex>
+            <v-flex xs4 >
+              <v-flex xs11 >
+                <div class="px-5 py-4">
+                <div class ="title-styles" v-text="card.title"></div>
+                <div class= "mt-5 px-2 py-1 bg-orange subtitle-styles white--text">Cod. Material:
+                  <span class="font-general white--text ml-4" v-text="card.materialCode"></span></div>
+                 <div class ="subtitle-styles white mt-2 pa-1" >Cod. Programa:
+                  <span class="ml-3" v-text="card.programCode"></span></div>
+                </div>
+              </v-flex>
+            </v-flex>
+  
+      <!-- segunda parte -->
+            <v-flex xs5>
+              <v-layout justify-end class="pr-2">               
+                  <!-- <img :src="card.url" :alt="card.title"> -->                                           
+                <img class="mr-2" src="../assets/images/edit.svg"> 
+                <img src="../assets/images/candado-open.svg">                         
+              </v-layout>
+              <div class="pa-3 line-heigth">                    
+                <div class ="subtitle-styles">
+                  <span class="underline">Duración:<br></span> <span class="font-general" v-text="card.duration"></span>
+                </div> 
+                <hr class= "line-card"> 
+                <br>
+                <v-layout row>
+                  <v-flex >                   
+                    <div class ="subtitle-styles">
+                      <span class="underline">Tipo:<br></span> <span class="font-general" v-text="card.materialType"></span>
+                    </div>
+                  </v-flex> 
+                  <v-flex xs6> 
+                    <div class ="subtitle-styles">
+                      <span class="underline">Género:<br></span> <span class="font-general" v-text="card.genre"></span>
+                    </div>
+                  </v-flex>  
+                </v-layout>                   
+                <hr class= "line-card">
+                <br>
+                <div class ="subtitle-styles">
+                  <span class="underline">Centro de Costo:<br></span> <span class="font-general" v-text="card.center"></span>
+                  </div>                     
+>>>>>>> 4807b43e81fec26621de4978d804c8498926de62
                 </div>
               </v-flex>    
             </v-layout>
@@ -78,7 +131,7 @@ export default {
         materialClasification: "Publico General",
         genre: "Genero1",
         center: "(32)Nombre del centro",
-         url: 'assets/images/logo.png',
+        url: "./images/logo.png",
       },
       {
         title: "Rapidos y Furiosos: sin control",
@@ -89,7 +142,8 @@ export default {
         materialType: "Periodistico",
         materialClasification: "Publico General",
         genre: "Genero1",
-        center: "(32)Nombre del centro"
+        center: "(32)Nombre del centro",
+      
       }
     ]
   })
