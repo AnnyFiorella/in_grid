@@ -34,9 +34,9 @@
                   <!-- enlatados-->
                
                 <div class ="subtitle-styles px-1 pt-5" v-if="card.canned">  
-                    <p class="text-orange underline line-heigth2">Vigencia: </p> 
-                    <p>Inicio: <span class="ml-3" v-text="card.startValidity"></span></p>
-                    <p>Fin: <span class="ml-3" v-text="card.endValidity"></span></p>  
+                    <p class="text-orange underline line-heigth">Vigencia: </p> 
+                    <p class="line-heigth2">Inicio: <span class="ml-2" v-text="card.startValidity"></span></p>
+                    <p class="line-heigth2">Fin: <span class="ml-4" v-text="card.endValidity"></span></p>  
                 </div> 
                 </v-flex>
                 </div>
@@ -47,7 +47,8 @@
               <v-layout justify-end class="pr-2">               
                   <!-- <img :src="card.url" :alt="card.title">                                            -->
                 <img class="mr-2" src="../assets/images/edit.svg"> 
-                <img src="../assets/images/candado-open.svg">                         
+                <img v-if="card.canned" src="../assets/images/candado-open.svg">
+                 <img v-else src="../assets/images/candado-cerrado.svg">                         
               </v-layout>
               <div class="py-3 pl-4 pr-1 line-heigth">                    
                 <div class ="subtitle-styles">

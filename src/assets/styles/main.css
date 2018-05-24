@@ -76,7 +76,7 @@
   line-height: 1.7;
 }
 .line-heigth2 {
-  line-height: 1.0;
+  line-height: 0.5;
 }
 .outline{
   border-left:2px solid var( --color-orange);
