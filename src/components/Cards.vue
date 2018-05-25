@@ -105,10 +105,10 @@
                     <div class ="subtitle-styles">
                       <span class="underline">Actores:<br></span> 
                       <p class="line-heigth2">
-                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.stars1"></span>
+                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.main_actors[0]"></span>
                       </p>
                       <p class="line-heigth2">
-                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.stars2"></span>
+                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.main_actors[1]"></span>
                       </p>  
                     </div>
                   </div>                  
@@ -139,6 +139,7 @@ export default {
       this.axios
         .get("https://griddb.herokuapp.com/material")
         .then(res => {
+         
           this.materials = res.data;
         })
         .catch(err => console.log(err));
@@ -146,39 +147,4 @@ export default {
   }
 };
 
-/*{ 
-        canned:false,
-        title: "América Noticias: Primera Edición",
-        src: "https://cde.americatv.com.pe/minisites/an-primera-edicion-360x227-316522.jpg",
-        materialCode: 123,
-        programCode: 321,
-        duration: "2h 30min",
-        materialType: "Periodístico",
-        materialClasification: "Publico General",
-        genre: "Genero1",
-        center: "Nombre del centro",
-        numberCenter: "(32)",
-       
-      },
-      {
-        canned:true,
-        title: "Rapidos y Furiosos: sin control",
-        src:
-          "https://s.s-bol.com/imgbase0/imagebase3/large/FC/9/3/1/4/1002004006554139.jpg",
-        materialCode: 125,
-        programCode: 320,
-        duration: "2h 30min",
-        materialType: "Periodistico",
-        materialClasification: "Publico General",
-        genre: "Genero1",
-        center: "Nombre del centro",
-        numberCenter: "(32)",
-        clasification: "Mayores de 14",
-        numberClasification: "(14)",
-        broadcastPrice:2000,
-        broadcastCredit:3,
-        stars:"Vin Diesel, Paul Walker",
-        startValidity:"22/01/2018",
-        endValidity:"23/05/2018",
-      }*/
 </script>
