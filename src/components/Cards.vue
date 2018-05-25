@@ -36,7 +36,7 @@
                 <div class ="subtitle-styles px-1 pt-5" v-if="material.canned">  
                     <p class="text-orange underline line-heigth2">Vigencia: </p> 
                     <p>Inicio: <span class="ml-3" v-text="material.startValidity"></span></p>
-                    <p>Fin: <span class="ml-3" v-text="maaterial.endValidity"></span></p>  
+                    <p>Fin: <span class="ml-3" v-text="material.endValidity"></span></p>  
                 </div> 
                 </v-flex>
                 </div>
