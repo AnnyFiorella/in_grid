@@ -34,9 +34,9 @@
                   <!-- enlatados-->
                
                 <div class ="subtitle-styles px-1 pt-5" v-if="material.canned">  
-                    <p class="text-orange underline line-heigth2">Vigencia: </p> 
-                    <p>Inicio: <span class="ml-3" v-text="material.startValidity"></span></p>
-                    <p>Fin: <span class="ml-3" v-text="material.endValidity"></span></p>  
+                    <p class="text-orange underline">Vigencia: </p> 
+                    <p class="line-heigth2">Inicio:<span class="ml-2" v-text="material.startValidity"></span></p>
+                    <p class="line-heigth2">Fin:<span class="ml-4" v-text="material.endValidity"></span></p>  
                 </div> 
                 </v-flex>
                 </div>
@@ -71,7 +71,7 @@
                   <v-flex >                   
                     <div class ="subtitle-styles">
                       <span class="underline">Centro de Costo:<br></span> 
-                      <span class="text-orange" v-text="material.num_center"></span>
+                      <span class="text-orange">(<span class="text-orange" v-text="material.num_center"></span>)</span>
                       <span class="font-general" v-text="material.cost_center"></span>
                     </div>
                   </v-flex> 
@@ -80,7 +80,7 @@
                     <div class ="subtitle-styles" v-if ="material.canned">
                       <span class="underline">Clasificación:<br></span> 
                        <span class="text-orange" v-text="material.num_classification"></span>
-                      <span class="font-general" v-text="material.classification"></span>
+                      <span class="text-orange">- </span><span class="font-general" v-text="material.classification"></span>
                     </div>
                   </v-flex>  
                 </v-layout>
