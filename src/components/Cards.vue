@@ -2,19 +2,19 @@
   <v-container  grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 mb-5
-        v-for="card in cards"
-        :key="card.title">
+        v-for="material in materials"
+        :key="material.title">
         <v-card color="grey lighten-2" class="elevation-7">
           <v-container fluid grid-list-lg>
             <v-layout row>
               <v-flex xs3>
                 <div>
-                <v-card-media v-if="!card.canned"
-                :src="card.src"
+                <v-card-media v-if="!material.canned"
+                :src="material.src"
                 height="300px">    
                  </v-card-media>
                  <v-card-media  v-else
-                :src="card.src"
+                :src="material.src"
                 height="450px">    
                  </v-card-media>
                 </div>
@@ -23,20 +23,20 @@
                <v-flex xs4 >
                 <v-flex xs11 >
                   <div class="pl-5 pr-5 py-4">
-                  <div class ="title-styles" v-text="card.title"></div>
+                  <div class ="title-styles" v-text="material.title"></div>
                 <v-flex>
                 <div class= "mt-5 px-2 py-1 bg-orange subtitle-styles white--text">Cod. Material:
-                  <span class="font-general white--text ml-4" v-text="card.materialCode"></span>
+                  <span class="font-general white--text ml-4" v-text="material.cod_material"></span>
                 </div>
                 <div class ="subtitle-styles white mt-2 pa-1" >Cod. Programa:
-                  <span class="ml-3" v-text="card.programCode"></span>
+                  <span class="ml-3" v-text="material.cod_program"></span>
                 </div>
                   <!-- enlatados-->
                
-                <div class ="subtitle-styles px-1 pt-5" v-if="card.canned">  
-                    <p class="text-orange underline line-heigth">Vigencia: </p> 
-                    <p class="line-heigth2">Inicio: <span class="ml-2" v-text="card.startValidity"></span></p>
-                    <p class="line-heigth2">Fin: <span class="ml-4" v-text="card.endValidity"></span></p>  
+                <div class ="subtitle-styles px-1 pt-5" v-if="material.canned">  
+                    <p class="text-orange underline line-heigth2">Vigencia: </p> 
+                    <p>Inicio: <span class="ml-3" v-text="material.startValidity"></span></p>
+                    <p>Fin: <span class="ml-3" v-text="maaterial.endValidity"></span></p>  
                 </div> 
                 </v-flex>
                 </div>
@@ -47,23 +47,22 @@
               <v-layout justify-end class="pr-2">               
                   <!-- <img :src="card.url" :alt="card.title">                                            -->
                 <img class="mr-2" src="../assets/images/edit.svg"> 
-                <img v-if="card.canned" src="../assets/images/candado-open.svg">
-                 <img v-else src="../assets/images/candado-cerrado.svg">                         
+                <img src="../assets/images/candado-open.svg">                         
               </v-layout>
               <div class="py-3 pl-4 pr-1 line-heigth">                    
                 <div class ="subtitle-styles">
-                  <span class="underline">Duración:<br></span> <span class="font-general" v-text="card.duration"></span>
+                  <span class="underline">Duración:<br></span> <span class="font-general" v-text="material.duration"></span>
                 </div> 
                 <hr class= "line-card mb-3"> 
                 <v-layout row>
                   <v-flex >                   
                     <div class ="subtitle-styles">
-                      <span class="underline">Tipo:<br></span> <span class="font-general" v-text="card.materialType"></span>
+                      <span class="underline">Tipo:<br></span> <span class="font-general" v-text="material.material_type"></span>
                     </div>
                   </v-flex> 
                   <v-flex xs6> 
                     <div class ="subtitle-styles">
-                      <span class="underline">Género:<br></span> <span class="font-general" v-text="card.genre"></span>
+                      <span class="underline">Género:<br></span> <span class="font-general" v-text="material.genre"></span>
                     </div>
                   </v-flex>  
                 </v-layout>                   
@@ -72,32 +71,32 @@
                   <v-flex >                   
                     <div class ="subtitle-styles">
                       <span class="underline">Centro de Costo:<br></span> 
-                      <span class="text-orange" v-text="card.numberCenter"></span>
-                      <span class="font-general" v-text="card.center"></span>
+                      <span class="text-orange" v-text="material.num_center"></span>
+                      <span class="font-general" v-text="material.cost_center"></span>
                     </div>
                   </v-flex> 
                   <!-- enlatados -->
                   <v-flex xs6> 
-                    <div class ="subtitle-styles" v-if ="card.canned">
+                    <div class ="subtitle-styles" v-if ="material.canned">
                       <span class="underline">Clasificación:<br></span> 
-                       <span class="text-orange" v-text="card.numberClasification"></span>
-                      <span class="font-general" v-text="card.clasification"></span>
+                       <span class="text-orange" v-text="material.num_classification"></span>
+                      <span class="font-general" v-text="material.classification"></span>
                     </div>
                   </v-flex>  
                 </v-layout>
-                <div v-if ="card.canned">
+                <div v-if ="material.canned">
                   <hr class= "line-card mb-3">
                   <v-layout row >               
                   <v-flex>                     
                     <div class ="subtitle-styles">
                       <span class="underline">Precio por pasada:<br></span> 
-                      $<span class="font-general" v-text="card.broadcastPrice"></span>
+                      $<span class="font-general" v-text="material.broadcastPrice"></span>
                     </div>
                   </v-flex> 
                   <v-flex xs6> 
                     <div class ="subtitle-styles">
                       <span class="underline">Saldo de Pasadas:<br></span> 
-                      <span class="font-general" v-text="card.broadcastCredit"></span>
+                      <span class="font-general" v-text="material.broadcastCredit"></span>
                     </div>
                   </v-flex>               
                   </v-layout>    
@@ -105,7 +104,7 @@
                   <div> 
                     <div class ="subtitle-styles">
                       <span class="underline">Actores:<br></span> 
-                      <span class="font-general" v-text="card.stars"></span>
+                      <span class="font-general" v-text="material.stars"></span>
                     </div>
                   </div>                  
                 </div>                  
@@ -122,9 +121,27 @@
 <script>
 
 export default {
-  data: () => ({
-    cards: [
-      { 
+  data() {
+    return {
+      materials: []
+    };
+  },
+  created() {
+    this.fetchMaterials();
+  },
+  methods: {
+    fetchMaterials() {
+      this.axios
+        .get("https://griddb.herokuapp.com/material")
+        .then(res => {
+          this.materials = res.data;
+        })
+        .catch(err => console.log(err));
+    }
+  }
+};
+
+/*{ 
         canned:false,
         title: "América Noticias: Primera Edición",
         src: "https://cde.americatv.com.pe/minisites/an-primera-edicion-360x227-316522.jpg",
@@ -158,8 +175,5 @@ export default {
         stars:"Vin Diesel, Paul Walker",
         startValidity:"22/01/2018",
         endValidity:"23/05/2018",
-      }
-    ]
-  })
-};
+      }*/
 </script>
