@@ -104,7 +104,12 @@
                   <div> 
                     <div class ="subtitle-styles">
                       <span class="underline">Actores:<br></span> 
-                      <span class="font-general" v-text="material.stars"></span>
+                      <p class="line-heigth2">
+                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.stars1"></span>
+                      </p>
+                      <p class="line-heigth2">
+                        <v-icon small class="text-orange">star</v-icon> <span class="font-general" v-text="material.stars2"></span>
+                      </p>  
                     </div>
                   </div>                  
                 </div>                  
@@ -153,7 +158,7 @@ export default {
         genre: "Genero1",
         center: "Nombre del centro",
         numberCenter: "(32)",
-        // url: "./images/logo.png",
+       
       },
       {
         canned:true,
