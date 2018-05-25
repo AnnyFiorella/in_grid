@@ -15,7 +15,7 @@
                  </v-card-media>
                  <v-card-media  v-else
                 :src="material.src"
-                height="450px">    
+                height="471px">    
                  </v-card-media>
                 </div>
                </v-flex>
